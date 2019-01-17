@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2016
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "NodeJsDht11Raspi3", "NodeJsDht11Raspi3.njsproj", "{533323FC-D521-4C68-9E4D-4B87AE1AEE50}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{533323FC-D521-4C68-9E4D-4B87AE1AEE50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{533323FC-D521-4C68-9E4D-4B87AE1AEE50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{533323FC-D521-4C68-9E4D-4B87AE1AEE50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{533323FC-D521-4C68-9E4D-4B87AE1AEE50}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3C520460-EED8-4F67-8E12-792D0D2AEF41}
+	EndGlobalSection
+EndGlobal

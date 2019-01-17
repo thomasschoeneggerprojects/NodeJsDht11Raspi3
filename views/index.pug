@@ -1,0 +1,128 @@
+﻿extends layout
+
+block content
+  h1= title
+  
+   
+    .sidebyside
+        .default
+            #myChart1a.chart
+   
+  script#script1a(type='text/javascript').
+
+    var minValue = 10;
+    var maxValue = 60;
+    var numberPoints = 500;
+    var intervalInSeconds = 2;
+
+    var measurementUrl = 'http://localhost:1337/measurements';
+    var anHttpRequest;
+    var chart = new EJSC.Chart("myChart1a", {show_messages: false});
+
+    var tempQueue;
+    var humQueue;
+    var lineArray;
+    var lineArrayHumidity;
+    var lineMinArray;
+    var lineMaxArray;
+
+    initTemperaturePoints();
+
+    var humiditySeries = new EJSC.LineSeries(new EJSC.ArrayDataHandler(lineArrayHumidity));
+
+    var temperatureSeries = new EJSC.LineSeries(new EJSC.ArrayDataHandler(lineArray));
+    var temperatureMinSeries = new EJSC.AreaSeries(new EJSC.ArrayDataHandler(lineMinArray));
+    var temperaturMaxSeries = new EJSC.LineSeries(new EJSC.ArrayDataHandler(lineMaxArray));
+    
+    
+    temperatureMinSeries.color =  "rgb(0, 0, 235)";
+    temperaturMaxSeries.color =  "rgb(255, 0, 0)";
+    temperaturMaxSeries.lineWidth = 35;
+    
+    temperatureSeries.title = "Temperature";
+
+    chart.addSeries(temperatureMinSeries);
+    chart.addSeries(temperaturMaxSeries);
+    chart.title = "Measurements DHT11";
+    chart.show_legend = false;
+    chart.axis_bottom.caption = "Time[sec]";
+    chart.axis_left.caption = " Value";
+
+    function timeoutHandler() {
+        
+        anHttpRequest = new XMLHttpRequest();
+
+        anHttpRequest.open( "GET", measurementUrl, true );
+        anHttpRequest.send( null );
+
+        anHttpRequest.onreadystatechange = function() {
+            if (anHttpRequest.readyState == 4 && anHttpRequest.status == 200)
+            {
+                var measurementResult = JSON.parse(anHttpRequest.responseText);
+                var responseParts = measurementResult.measurements.split(":");
+                var temp = parseFloat(responseParts[0]);
+                var hum = parseFloat(responseParts[1]);
+                addMeasurements(temp, hum);
+                modifyLineArrayMeasurements();
+                setTimeout(timeoutHandler, intervalInSeconds*1000);
+            }
+        } 
+    }
+
+    function addMeasurements(temp,hum){
+        tempQueue.push(temp);
+        humQueue.push(hum);
+        if(tempQueue.length > numberPoints)
+        {
+            var value = tempQueue.shift();
+            var value = humQueue.shift();
+        } 
+    }
+    
+    function modifyLineArrayMeasurements(){
+        var i;
+        for (i = 0; i < numberPoints; i++) { 
+          lineArray[i][1] = tempQueue[i];
+          lineArrayHumidity[i][1] = humQueue[i];
+        }
+        chart.removeSeries(temperatureSeries);
+        chart.removeSeries(humiditySeries);
+
+        temperatureSeries = new EJSC.LineSeries(new EJSC.ArrayDataHandler(lineArray));
+        temperatureSeries.color = "rgb(44, 167, 0)";
+        temperatureSeries.lineWidth = 2;
+
+        humiditySeries = new EJSC.LineSeries(new EJSC.ArrayDataHandler(lineArrayHumidity));
+        humiditySeries.color = "rgb(152, 150, 251)";
+        humiditySeries.lineWidth = 2; 
+    
+        chart.addSeries(temperatureSeries);
+        chart.addSeries(humiditySeries);
+    }
+
+    function initTemperaturePoints()
+    {
+        tempQueue = [];
+        humQueue = [];
+        lineArray = [];
+        lineArrayHumidity = [];
+        lineMinArray = [];
+        lineMaxArray = [];
+        var sec = 0;
+        for (i = 0; i < numberPoints; i++) { 
+            tempQueue.push(0);
+            humQueue.push(0);
+            lineArray.push([sec,0]);
+            lineArrayHumidity.push([sec,0]);
+            lineMinArray.push([sec,minValue]);
+            lineMaxArray.push([sec,maxValue]);
+            sec += intervalInSeconds;
+        }
+    }
+    
+    timeoutHandler();
+
+
+    
+
+  

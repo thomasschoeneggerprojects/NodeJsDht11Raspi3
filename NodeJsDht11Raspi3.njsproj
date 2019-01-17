@@ -1,0 +1,827 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <Name>NodeJsDht11Raspi3</Name>
+    <RootNamespace>ExpressAppDemo1</RootNamespace>
+    <LastActiveSolutionConfig>Debug|Any CPU</LastActiveSolutionConfig>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>533323fc-d521-4c68-9e4d-4b87ae1aee50</ProjectGuid>
+    <ProjectHome>
+    </ProjectHome>
+    <StartupFile>app.js</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <NodejsPort>1337</NodejsPort>
+    <TypeScriptSourceMap>true</TypeScriptSourceMap>
+    <TypeScriptModuleKind>CommonJS</TypeScriptModuleKind>
+    <TypeScriptToolsVersion>3.0</TypeScriptToolsVersion>
+    <EnableTypeScript>true</EnableTypeScript>
+    <StartWebBrowser>true</StartWebBrowser>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="app.ts" />
+    <TypeScriptCompile Include="model\MeasurementValue.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="routes\getValues.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="routes\index.ts" />
+    <TypeScriptCompile Include="routes\user.ts" />
+    <Content Include="public\javascripts\EJSCharts-master\CHANGES.txt" />
+    <Content Include="public\javascripts\EJSCharts-master\EJSChart.css" />
+    <Content Include="public\javascripts\EJSCharts-master\examples\includes\template.css" />
+    <Content Include="public\javascripts\EJSCharts-master\help\EJSChart.chm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\EJSChart.cnt" />
+    <Content Include="public\javascripts\EJSCharts-master\help\EJSChart.fts" />
+    <Content Include="public\javascripts\EJSCharts-master\help\EJSChart.GID" />
+    <Content Include="public\javascripts\EJSCharts-master\help\EJSChart.hlp" />
+    <Content Include="public\javascripts\EJSCharts-master\help\EJSChart.hm3" />
+    <Content Include="public\javascripts\EJSCharts-master\help\EJSChart.hmx" />
+    <Content Include="public\javascripts\EJSCharts-master\help\EJSChart.pdf" />
+    <Content Include="public\javascripts\EJSCharts-master\help\EJSChartCHM.zip" />
+    <Content Include="public\javascripts\EJSCharts-master\help\EJSChartHLP.zip" />
+    <Content Include="public\javascripts\EJSCharts-master\help\GSG_manual.mnl" />
+    <Content Include="public\javascripts\EJSCharts-master\help\headerbg.bmp" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\additionalinformation.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\auto_zoom_after.zoom60.jpg" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\auto_zoom_before.zoom60.jpg" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\changesinversion0_5_3beta.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\changesinversion0_5_3beta.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\changesinversion0_6_0beta.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\changesinversion0_6_0beta.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\changesinversion0_7_1beta.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\changesinversion0_7_1beta.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\changesinversion0_8_0beta.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\changesinversion0_8_0beta.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\changes_in_version_0_8_1_beta.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\changes_in_version_1_0.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\changes_in_version_1_0_1.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\changes_in_version_1_1.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\changes_in_version_1_2.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\changes_in_version_1_2_1.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\changes_in_version_1_3.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\changes_in_version_1_3_1.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\chart_anatomy.png" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\cicon1.gif" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\cicon2.gif" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\cicon9.gif" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\cicon_loadindex_ani.gif" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\customization.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\customization.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\dataformats.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\dataformats.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\dataformats_xmlcompact.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\dataformats_xmlfull.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\dataformats_xmlshort.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\default.css" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\deployment.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\deployment.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejschart_content.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejschart_content_dyn.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejschart_content_static.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejschart_dummyframe.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejschart_ftsearch.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\EJSChart_headframe.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejschart_hierarchy.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejschart_kwindex.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejschart_kwindex_dyn.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejschart_kwindex_static.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejscnamespace.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejscnamespace.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_ajaxdatahandler.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_ajaxdatahandler_events_onneedsdata.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_ajaxdatahandler_methods_geturl.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_ajaxdatahandler_methods_setrequesttype.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_ajaxdatahandler_methods_seturl.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_ajaxdatahandler_methods_seturldata.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_ajaxdatahandler_methods_setxmldata.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_ajaxdatahandler_properties_requesttype.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_ajaxdatahandler_properties_url.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_ajaxdatahandler_properties_urldata.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_analoggaugeseries.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_analoggaugeseries_properties_anchor.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_analoggaugeseries_properties_axis.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_analoggaugeseries_properties_fillcolor.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_analoggaugeseries_properties_fillopacity.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_analoggaugeseries_properties_height.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_analoggaugeseries_properties_label.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_analoggaugeseries_properties_lock.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_analoggaugeseries_properties_marker_position.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_analoggaugeseries_properties_max.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_analoggaugeseries_properties_min.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_analoggaugeseries_properties_minortick.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_analoggaugeseries_properties_needle.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_analoggaugeseries_properties_position.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_analoggaugeseries_properties_range.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_analoggaugeseries_properties_ranges.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_analoggaugeseries_properties_range_degrees.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_analoggaugeseries_properties_start_degree.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_analoggaugeseries_properties_tick.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_analoggaugeseries_properties_tickcount.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_analoggaugeseries_properties_width.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_areaseries.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_areaseries.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_areaseries_properties_closeline.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_arraydatahandler.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_arraydatahandler.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_arraydatahandler_methods_getarray.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_arraydatahandler_methods_setarray.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_barpoint.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_barseries.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_barseries.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_barseries_events_onbarneedscolor.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_barseries_methods_addrange.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_barseries_methods_clearranges.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_barseries_methods_deleterange.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_barseries_methods_setdefaultcolors.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_barseries_methods_setgroupedbars.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_barseries_methods_setintervaloffset.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_barseries_methods_setlinewidth.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_barseries_methods_setlinewidth.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_barseries_properties_defaultcolors.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_barseries_properties_groupedbars.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_barseries_properties_intervaloffset.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_barseries_properties_linewidth.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_barseries_properties_linewidth.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_barseries_properties_orientation.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_barseries_properties_ranges.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_barseries_properties_treelegend.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_barseries_properties_usecolorarray.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_events.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_events2.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_events_onafterdraw.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_events_onafterdraw.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_events_onaftermove.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_events_onaftermove.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_events_onafterselectpoint.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_events_onafterselectpoint.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_events_onaftershowcrosshairs.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_events_onafterunselectpoint.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_events_onafterunselectpoint.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_events_onafterzoom.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_events_onafterzoom.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_events_onbeforebeginzoom.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_events_onbeforedblclick.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_events_onbeforedblclick.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_events_onbeforedraw.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_events_onbeforedraw.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_events_onbeforeendzoom.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_events_onbeforeselectpoint.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_events_onbeforeselectpoint.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_events_onbeforeunselectpoint.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_events_onbeforeunselectpoint.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_events_ondblclickpoint.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_events_ondblclickpoint.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_events_onshowcrosshairs.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_events_onshowcrosshairs.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_events_onshowhint.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_events_onshowhint.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_events_onshowmessage.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_events_onshowmessage.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_events_onxaxisneedsticks.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_events_onyaxisneedsticks.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_methods.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_methods_acquireseries.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_methods_acquireseries.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_methods_addseries.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_methods_addseries.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_methods_addxaxisbin.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_methods_addyaxisbin.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_methods_clearselectedpoint.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_methods_convertpixeltopoint.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_methods_convertpointtopixel.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_methods_exportsvg.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_methods_exportsvglegend.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_methods_findclosestpointinseries.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_methods_getminmaxyinxrange.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_methods_getxextremes.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_methods_getyextremes.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_methods_getzoom.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_methods_getzoomboxcoordinates.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_methods_hidegrid.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_methods_hidetitlebar.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_methods_hidetitlebar.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_methods_hidexaxis.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_methods_hidexaxis.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_methods_hideyaxis.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_methods_hideyaxis.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_methods_redraw.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_methods_redraw.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_methods_remove.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_methods_removeseries.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_methods_removeseries.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_methods_removexaxisbin.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_methods_removeyaxisbin.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_methods_selectclosestpoint.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_methods_selectclosestpoint.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_methods_selectpoint.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_methods_setcrosshairs.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_methods_setcrosshairs.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_methods_setlegendtitle.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_methods_settitle.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_methods_settitle.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_methods_setxaxiscapion.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_methods_setxaxiscapion.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_methods_setxextremes.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_methods_setxextremes.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_methods_setyaxiscaption.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_methods_setyaxiscaption.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_methods_setyextremes.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_methods_setyextremes.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_methods_setzoom.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_methods_setzoomboxcoordinates.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_methods_showcrosshairs.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_methods_showgrid.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_methods_showtitlebar.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_methods_showtitlebar.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_methods_showxaxis.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_methods_showxaxis.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_methods_showyaxis.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_methods_showyaxis.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properies_allow_int.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properies_allow_interactivity.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properies_allow_interactivity.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties2.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_allow_hide_error.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_allow_mouse_wheel_zoom.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_allow_zo.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_allow_zoom.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_allow_zoom.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_auto_fin.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_auto_find_point_by_x.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_auto_find_point_by_x.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_auto_zoom.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_auto_zoom.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_force_st.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_force_static_points.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_force_static_points.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_force_static_points_x.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_force_static_points_y.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_legendtitle.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_proximit.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_proximity_snap.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_proximity_snap.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_show_cro.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_show_crosshairs.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_show_crosshairs.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_show_grid.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_show_hin.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_show_hints.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_show_hints.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_show_leg.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_show_legend.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_show_legend.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_show_mes.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_show_messages.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_show_messages.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_show_mou.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_show_mouse_position.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_show_mouse_position.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_show_titlebar.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_show_titlebar.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_show_x_axis.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_show_x_axis.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_show_y_axis.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_show_y_axis.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_title.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_title.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_x_axis_c.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_x_axis_caption.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_x_axis_caption.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_x_axis_classname.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_x_axis_e.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_x_axis_extremes_ticks.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_x_axis_extremes_ticks.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_x_axis_f.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_x_axis_formatter.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_x_axis_formatter.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_x_axis_max_tick_interval.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_x_axis_minor_ticks.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_x_axis_min_tick_interval.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_x_axis_size.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_x_axis_stagger_ticks.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_x_axis_tick_classname.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_x_axis_tick_count.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_x_cursor.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_x_cursor_position_caption.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_x_cursor_position_caption.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_x_cursor_position_formatter.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_x_cursor_position_text.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_x_max.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_x_max.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_x_min.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_x_min.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_x_value_.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_x_value_hint_caption.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_x_value_hint_caption.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_x_zero_p.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_x_zero_plane.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_x_zero_plane.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_y_axis_caption.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_y_axis_caption.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_y_axis_classname.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_y_axis_extremes_ticks.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_y_axis_extremes_ticks.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_y_axis_formatter.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_y_axis_formatter.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_y_axis_max_tick_interval.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_y_axis_minor_ticks.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_y_axis_min_tick_interval.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_y_axis_size.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_y_axis_tick_classname.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_y_axis_tick_count.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_y_cursor_position_caption.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_y_cursor_position_caption.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_y_cursor_position_formatter.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_y_cursor_position_text.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_y_max.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_y_max.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_y_min.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_y_min.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_y_value_hint_caption.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_y_value_hint_caption.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_y_zero_plane.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_chart_properties_y_zero_plane.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_csvfiledatahandler.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_csvfiledatahandler.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_csvfiledh_methods_geturl.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_csvstringdatahandler.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_csvstringdatahandler.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_csvstringdatahandler_methods_getcsv.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_csvstringdatahandler_methods_setcsv.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_datahandler.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_datahandler.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_datahandler_events_ondataavailable.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_datahandler_methods_loaddata.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_dateformatter.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_dateformatter.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_dateformatter_properties_format_string.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_dateformatter_properties_format_string.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_dateformatter_properties_timezoneoffset.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_dateformatter_properties_useutc.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_formatter.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_formatter.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_formatter_methods_format.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_formatter_methods_format.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_formatter_properties_format_string.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_formatter_properties_format_string.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_functionseries.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_functionseries.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_functionseries_methods_setlinewidth.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_functionseries_methods_setlinewidth.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_functionseries_properties_linewidth.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_functionseries_properties_linewidth.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_gaugepoint.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_gaugeseries.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_inheritable.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_inheritable.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_lineseries.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_lineseries.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_lineseries_events.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_lineseries_events.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_lineseries_methods.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_lineseries_methods.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_lineseries_methods_setlinewidth.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_lineseries_methods_setlinewidth.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_lineseries_properties_drawpoints.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_lineseries_properties_linewidth.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_lineseries_properties_linewidth.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_lineseries_properties_pointbordercolor.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_lineseries_properties_pointbordersize.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_lineseries_properties_pointcolor.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_lineseries_properties_pointsize.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_numberformatter.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_numberformatter.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_numberformatter_properties_currency_align.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_numberformatter_properties_currency_align.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_numberformatter_properties_currency_position.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_numberformatter_properties_currency_position.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_numberformatter_properties_currency_symbol.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_numberformatter_properties_currency_symbol.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_numberformatter_properties_decimal_separator.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_numberformatter_properties_decimal_seperator.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_numberformatter_properties_forced_decimals.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_numberformatter_properties_forced_decimals.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_numberformatter_properties_negative_symbol.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_numberformatter_properties_negative_symbol.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_numberformatter_properties_thousand_separator.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_numberformatter_properties_thousand_seperator.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_numberformatter_properties_variable_decimals.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_numberformatter_properties_variable_decimals.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_numberformatter_props_currency_align.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_numberformatter_props_currency_position.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_numberformatter_props_currency_symbol.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_numberformatter_props_decimal_separator.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_numberformatter_props_forced_decimals.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_numberformatter_props_negative_symbol.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_numberformatter_props_thousand_separator.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_numberformatter_props_variable_decimals.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_piepoint.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_pieseries.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_pieseries.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_pieseries_events_onpieceneedscolor.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_pieseries_events_onpieceneedscolor.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_pieseries_methods_findcenter.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_pieseries_methods_findcenterofcurve.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_pieseries_methods_getpoints.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_pieseries_methods_gettotalvalue.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_pieseries_methods_resettotalvalue.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_pieseries_methods_setdefaultcolors.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_pieseries_methods_setdefaultcolors.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_pieseries_methods_settotalvalue.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_pieseries_properties_defaultcolors.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_pieseries_properties_defaultcolors.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_pieseries_properties_height.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_pieseries_properties_position.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_pieseries_properties_total_value.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_pieseries_properties_treelegend.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_pieseries_properties_width.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_point.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_point.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_point_properties_label.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_point_properties_userdata.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_point_properties_x.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_point_properties_y.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_properties_defaultbarcolors.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_properties_defaultcolors.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_properties_defaultcolors.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_properties_defaultimagepath.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_properties_defaultimagepath.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_properties_defaultpiecolors.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_properties_defaultpiecolors.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_scatterseries.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_scatterseries.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_scatterseries_methods_setpointstyle.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_scatterseries_methods_setpointstyle.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_scatterseries_properties_pointsize.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_scatterseries_properties_pointsize.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_scatterseries_properties_pointstyle.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_scatterseries_properties_pointstyle.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_series.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_series.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_series_events_onafterdataavailable.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_series_events_onafterdataavailable.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_series_events_onaftervisibilitychange.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_series_events_onaftervisibilitychange.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_series_events_onbeforevisibilitychange.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_series_events_onbeforevisibilitychange.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_series_methods_getdatahandler.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_series_methods_getvisibility.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_series_methods_getvisibility.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_series_methods_hide.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_series_methods_hide.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_series_methods_hidelegend.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_series_methods_reload.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_series_methods_reload.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_series_methods_setcolor.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_series_methods_setcolor.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_series_methods_setcoloredlegend.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_series_methods_setdatahandler.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_series_methods_setdatahandler.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_series_methods_setlineopacity.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_series_methods_setlinewidth.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_series_methods_setopacity.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_series_methods_settitle.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_series_methods_show.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_series_methods_show.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_series_methods_showlegend.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_series_properties_autosort.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_series_properties_color.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_series_properties_color.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_series_properties_coloredlegend.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_series_properties_delayload.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_series_properties_legendisvisible.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_series_properties_lineopacity.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_series_properties_linewidth.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_series_properties_opacity.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_series_properties_title.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_series_properties_title.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_series_properties_visible.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_series_properties_visible.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_series_properties_x_axis_formatter.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_series_properties_x_axis_formatter.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_series_properties_y_axis_formatter.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_series_properties_y_axis_formatter.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_trendseries.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_trendseries.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_xmldatahandler.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_xmldatahandler.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_xmldatahandler_methods_geturl.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_xmldatahandler_methods_seturl.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_xmlstringdatahandler.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_xmlstringdatahandler_methods_getxml.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_xmlstringdatahandler_methods_setxml.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\ejsc_xypoint.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\embim1.jpg" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\embim2.jpg" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\embim3.jpg" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\embim4.jpg" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\embim5.jpg" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\embim6.jpg" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\embim7.jpg" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\embim8.jpg" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\embim9.jpg" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\esjc_csvfiledh_methods_seturl.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\examplescodesnippets.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\examplescodesnippets.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\exporting_to_svg.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\getting_support.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\gsg_anatomy_chartbody.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\gsg_anatomy_hint.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\gsg_anatomy_legend.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\gsg_anatomy_titlebar.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\gsg_anatomy_xaxis.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\gsg_anatomy_yaxis.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\gsg_creatingyourfirstchart.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\gsg_customizingyourchart.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\gsg_implementationinstructions.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\gsg_overview.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\index.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\methods.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\text_replacement_options.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\text_replacement_options.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\Thumbs.db" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\using_colors.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\welcometopic.htm" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\welcometopic.html" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\x_zero_plane.jpg" />
+    <Content Include="public\javascripts\EJSCharts-master\help\HTML\x_zero_plane.png" />
+    <Content Include="public\javascripts\EJSCharts-master\help\images\Anatomy.doc" />
+    <Content Include="public\javascripts\EJSCharts-master\help\images\auto_zoom_after.png" />
+    <Content Include="public\javascripts\EJSCharts-master\help\images\auto_zoom_before.png" />
+    <Content Include="public\javascripts\EJSCharts-master\help\images\chart_anatomy.png" />
+    <Content Include="public\javascripts\EJSCharts-master\help\images\Thumbs.db" />
+    <Content Include="public\javascripts\EJSCharts-master\help\images\x_zero_plane.bmp" />
+    <Content Include="public\javascripts\EJSCharts-master\help\images\x_zero_plane.png" />
+    <Content Include="public\javascripts\EJSCharts-master\help\Manual\EJSChart_manual.rtf" />
+    <Content Include="public\javascripts\EJSCharts-master\help\Manual\embim1.bmp" />
+    <Content Include="public\javascripts\EJSCharts-master\help\Manual\embim2.bmp" />
+    <Content Include="public\javascripts\EJSCharts-master\help\Manual\embim3.bmp" />
+    <Content Include="public\javascripts\EJSCharts-master\help\Manual\embim4.bmp" />
+    <Content Include="public\javascripts\EJSCharts-master\help\Manual\embim5.bmp" />
+    <Content Include="public\javascripts\EJSCharts-master\help\Manual\embim6.bmp" />
+    <Content Include="public\javascripts\EJSCharts-master\help\Manual\embim7.bmp" />
+    <Content Include="public\javascripts\EJSCharts-master\help\Manual\embim8.bmp" />
+    <Content Include="public\javascripts\EJSCharts-master\help\Manual\embim9.bmp" />
+    <Content Include="public\javascripts\EJSCharts-master\help\Manual\Thumbs.db" />
+    <Content Include="public\javascripts\EJSCharts-master\help\Manual\x_zero_plane.png" />
+    <Content Include="public\javascripts\EJSCharts-master\help\PDF_manual.mnl" />
+    <Content Include="public\javascripts\EJSCharts-master\help\README.txt" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\EJSChart.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\EJSChart.xsl" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\EJSChart_topics.xsl" />
+    <None Include="public\javascripts\EJSCharts-master\help\XML_Source\helpproject.xsd" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Images\x_zero_plane.bmp" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Images\x_zero_plane.png" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\AdditionalInformation.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\Changesinversion0.5.3Beta.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\Changesinversion0.6.0Beta.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\Customization.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\DataFormats.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.AreaSeries.Events.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.AreaSeries.Hierarchy.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.AreaSeries.Methods.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.AreaSeries.Properties.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.AreaSeries.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.ArrayDataHandler.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.BarSeries.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Chart.events.onAfterDraw.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Chart.events.onAfterMove.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Chart.events.onAfterSelectPoint.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Chart.events.onAfterUnselectPoint.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Chart.events.onAfterZoom.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Chart.events.onBeforeDblClick.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Chart.events.onBeforeDraw.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Chart.events.onBeforeSelectPoint.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Chart.events.onBeforeUnselectPoint.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Chart.events.onDblClickPoint.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Chart.events.onShowCrosshairs.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Chart.events.onShowHint.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Chart.events.onShowMessage.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Chart.Events.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Chart.Events2.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Chart.Hierarchy.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Chart.methods.acquireSeries.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Chart.methods.addSeries.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Chart.methods.redraw.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Chart.methods.removeSeries.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Chart.methods.selectClosestPoint.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Chart.methods.setTitle.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Chart.methods.setXAxisCap.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Chart.methods.setXAxisCapion.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Chart.methods.setXExtreme.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Chart.methods.setXExtremes.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Chart.methods.setYAxisCap.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Chart.methods.setYAxisCaption.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Chart.methods.setYExtreme.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Chart.methods.setYExtremes.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Chart.methods.showCrosshairs.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Chart.Methods.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Chart.Properies.allow_int.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Chart.Properies.allow_interactivity.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Chart.Properties.allow_zo.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Chart.properties.allow_zoom.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Chart.Properties.auto_fin.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Chart.properties.auto_find_point_by_x.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Chart.properties.auto_zoom.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Chart.Properties.force_st.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Chart.properties.force_static_points.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Chart.Properties.proximit.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Chart.properties.proximity_snap.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Chart.Properties.show_cro.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Chart.properties.show_crosshairs.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Chart.Properties.show_hin.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Chart.properties.show_hints.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Chart.Properties.show_leg.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Chart.properties.show_legend.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Chart.Properties.show_mes.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Chart.properties.show_messages.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Chart.Properties.show_mou.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Chart.properties.show_mouse_position.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Chart.Properties.title.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Chart.Properties.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Chart.Properties.x_axis_c.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Chart.properties.x_axis_caption.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Chart.Properties.x_axis_e.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Chart.properties.x_axis_extremes_ticks.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Chart.properties.x_axis_f.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Chart.properties.x_axis_formatter.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Chart.properties.x_cursor.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Chart.properties.x_cursor_position_text.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Chart.properties.x_max.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Chart.properties.x_min.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Chart.properties.x_value_.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Chart.properties.x_value_hint_caption.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Chart.properties.x_zero_p.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Chart.properties.x_zero_plane.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Chart.properties.y_axis_c.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Chart.properties.y_axis_caption.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Chart.properties.y_axis_e.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Chart.properties.y_axis_extremes_ticks.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Chart.properties.y_axis_f.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Chart.properties.y_axis_formatter.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Chart.properties.y_cursor.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Chart.properties.y_cursor_position_text.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Chart.properties.y_max.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Chart.properties.y_min.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Chart.properties.y_value_.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Chart.properties.y_value_hint_caption.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Chart.properties.y_zero_p.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Chart.properties.y_zero_plane.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Chart.Properties2.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Chart.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.CSVFileDataHandler.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.CSVStringDataHandler.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.DataHandler.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.DateFormatter.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Formatter.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.FunctionSeries.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Inheritable.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.LineSeries.Events.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.LineSeries.Events2.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.LineSeries.Hierarchy.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.LineSeries.Methods.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.LineSeries.Methods2.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.LineSeries.properties.lineWidth.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.LineSeries.Properties.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.LineSeries.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.NumberFormatter.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.PieSeries.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Point.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.ScatterSeries.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Series.events.onAfterDataAvailable.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Series.events.onAfterVisibilityChange.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Series.events.onBeforeVisibilityChange.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Series.Events.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Series.Hierarchy.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Series.methods.getVisibility.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Series.methods.hide.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Series.methods.reload.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Series.methods.setColor.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Series.methods.setDataHandler.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Series.methods.show.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Series.Methods.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Series.properties.color.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Series.properties.title.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Series.properties.visible.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Series.Properties.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Series.properties.x_axis_formatter.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Series.properties.y_axis_formatter.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.Series.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.TrendSeries.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSC.XMLDataHandler.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSChart.Hierarchy.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\EJSCNamespace.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\ExamplesCodeSnippets.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\GetVisibility.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\Methods.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\Welcometopic.xml" />
+    <Content Include="public\javascripts\EJSCharts-master\images\blank.gif" />
+    <Content Include="public\javascripts\EJSCharts-master\images\images.gif" />
+    <Content Include="public\javascripts\EJSCharts-master\images\zoom.gif" />
+    <Content Include="public\javascripts\EJSCharts-master\LICENSE.txt" />
+    <Content Include="public\javascripts\EJSCharts-master\README.md" />
+    <Content Include="tsconfig.json" />
+    <Content Include="package.json" />
+    <Content Include="public\stylesheets\main.css" />
+    <Content Include="README.md" />
+    <Content Include="views\index.pug" />
+    <Content Include="views\layout.pug" />
+    <Content Include="views\error.pug" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="model\" />
+    <Folder Include="public\" />
+    <Folder Include="public\images\" />
+    <Folder Include="public\javascripts\" />
+    <Folder Include="public\javascripts\EJSCharts-master\" />
+    <Folder Include="public\javascripts\EJSCharts-master\examples\" />
+    <Folder Include="public\javascripts\EJSCharts-master\examples\includes\" />
+    <Folder Include="public\javascripts\EJSCharts-master\help\" />
+    <Folder Include="public\javascripts\EJSCharts-master\help\HTML\" />
+    <Folder Include="public\javascripts\EJSCharts-master\help\images\" />
+    <Folder Include="public\javascripts\EJSCharts-master\help\Manual\" />
+    <Folder Include="public\javascripts\EJSCharts-master\help\XML_Source\" />
+    <Folder Include="public\javascripts\EJSCharts-master\help\XML_Source\Images\" />
+    <Folder Include="public\javascripts\EJSCharts-master\help\XML_Source\Topics\" />
+    <Folder Include="public\javascripts\EJSCharts-master\images\" />
+    <Folder Include="public\stylesheets\" />
+    <Folder Include="routes\" />
+    <Folder Include="views\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="public\javascripts\EJSCharts-master\EJSChart.js" />
+    <Compile Include="public\javascripts\EJSCharts-master\EJSChart.min.js" />
+    <Compile Include="public\javascripts\EJSCharts-master\excanvas.js" />
+    <Compile Include="public\javascripts\EJSCharts-master\help\HTML\ejschart_content.js" />
+    <Compile Include="public\javascripts\EJSCharts-master\help\HTML\ejschart_navigation.js" />
+    <Compile Include="public\javascripts\EJSCharts-master\help\HTML\EJSChart_popup_html.js" />
+    <Compile Include="public\javascripts\EJSCharts-master\help\HTML\helpman_topicinit.js" />
+    <Compile Include="public\javascripts\EJSCharts-master\help\HTML\highlight.js" />
+    <Compile Include="public\javascripts\EJSCharts-master\help\HTML\settings.js" />
+    <Compile Include="public\javascripts\EJSCharts-master\help\HTML\zoom_index.js" />
+    <Compile Include="public\javascripts\EJSCharts-master\help\HTML\zoom_pageinfo.js" />
+    <Compile Include="public\javascripts\EJSCharts-master\help\HTML\zoom_search.js" />
+  </ItemGroup>
+  <!-- Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them. -->
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsTools.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48022/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

@@ -1,0 +1,188 @@
+
+ 
+/********************************************
+   HTML ELEMENTS
+********************************************/ 
+
+/* Top elements */
+* { margin:0; padding: 0; }
+
+
+
+/* links */
+a	{ 
+	color: #72A545;
+	background: inherit;
+	text-decoration: none;
+}
+a:hover { 
+	color: #006699;
+	background: inherit; 	 
+}
+ 
+/* headers */
+h1, h2, h3 {
+	font-family: 'Trebuchet MS', Arial, sans-serif;
+	font-weight: bold;
+}
+h1 {
+	font-size: 1.5em;	
+}
+h2 {
+	font-size: 1.3em;
+	color: #666;
+}
+h3 {
+	font-size: 1.1em;
+	text-transform: uppercase;
+	color: #333;
+	letter-spacing: 1px;
+}
+
+h1, h2, h3, p { 
+	padding: 0;
+	margin: 10px 15px; 
+}
+
+
+
+/*****************************
+      LAYOUT 
+******************************/
+#wrap {
+   margin: 0 auto ;
+   padding:0;	
+   text-align: left;
+   background-color:#FFF;
+   width: 790px;  	
+}
+#content-wrap {
+	clear:both;
+   margin:0; padding:0;
+	width: 790px;		
+}
+
+
+#header-tabs a:hover span { background-position: 100% -42px;}
+#header-tabs #current a { background-position:0% -42px; }
+#header-tabs #current a span { background-position:100% -42px; color: #FFF;}
+
+/* main content */
+#main {
+	width: 790px;
+	margin: 0; padding: 0;
+	background-color: inherit;
+	margin-bottom: 10px;
+}
+#mainIndex {
+	width: 535px;
+	float: left;
+	margin: 0; padding: 0;
+	background-color: inherit;
+	margin-bottom: 10px;
+}		
+#mainIndex h1, #main h1 {
+	padding: 8px 0 3px 25px;
+	text-transform: none;
+	background: url(square_arrow.gif) no-repeat 0% .7em;
+	border-bottom: 2px solid #f2f2f2;	
+	color: #339900;	
+}	
+
+
+/* footer */
+#footer { 
+	clear: both;
+	height: 40px;
+	color: #CCC;
+	background: #000;
+	margin: 0;	
+	font-size: 92%;			
+}
+#footer a { 
+	text-decoration: none; 
+	font-weight: bold;	
+	color: #FFF; 
+}
+#footer #footer-left {
+	width: 68%;
+	float: left;
+	text-align: left;
+	margin: 0; padding: 10px;
+}
+#footer #footer-right {
+	width: 25%;
+	float: right;
+	text-align: right;
+	margin: 0; padding: 10px;
+}
+
+/* alignment classes */
+.float-left  { float: left; }
+.float-right { float: right; }
+.align-left  { text-align: left; }
+.align-right { text-align: right; }
+
+/* additional classes */
+.clear {	clear:both;	} 
+.hide  { display: none; }
+.gray  { color: #CCC; }
+
+.comments { 
+	color: #333; 
+	background: #FFF;
+	text-align: right; 
+	border-top: 1px dashed #EFF0F1;
+	border-bottom: 1px dashed #EFF0F1; 
+	padding: 5px 0;
+	margin-top: 20px;
+}
+.clear { clear: both; }
+
+textarea {
+	margin-left: 16px;
+	width: 752px;
+	height: 300px;
+	border: 1px inset;
+}
+
+textarea.readonly {
+	background-color: #ededed;
+	color: #000;	
+}
+
+#pack_status {
+	margin-bottom: 20px;
+	margin-left: 16px;
+}
+
+.sidebyside {
+	margin-left: 4px;
+	margin-bottom: 10px;
+}
+
+.sidebyside ol.code {
+	width: 345px;
+}
+
+.sidebyside .default {
+	float: left;
+	width: 390px;
+}
+
+.sidebyside .example {
+	float: left;
+	width: 390px;
+}
+
+.sidebyside .chart {
+	margin-left: 15px;
+	width: 1600px;
+	height: 345px;
+}
+
+pre {
+	margin-left: 10px;
+	padding-bottom: 10px;
+	font-size: 12px;	
+}

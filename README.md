@@ -1,4 +1,4 @@
-NodeJs Applicateion for Raspberry Pi 3 including DHT11 Sensor
+NodeJs Application for Raspberry Pi 3 including DHT11 Sensor
 
 Setup Raspberry:
 
